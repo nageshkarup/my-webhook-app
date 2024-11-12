@@ -37,6 +37,9 @@ def webhook():
         else:
             return jsonify({"message": "No webhook data available"}), 200
 
+    elif request.method == 'HEAD':
+        return '', 200
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
