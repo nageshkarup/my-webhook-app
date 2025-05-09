@@ -18,7 +18,7 @@ def webhook():
             data = request.get_json()
 
             # Store the data (keep only the last 3 records)
-            if len(last_three_webhook_data) >= 3:
+            if len(last_three_webhook_data) >= 10:
                 last_three_webhook_data.pop(0)
 
             last_three_webhook_data.append(data)
